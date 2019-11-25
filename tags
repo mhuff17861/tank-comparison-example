@@ -1,0 +1,28 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+TANK_H	C++_Assignment/Tank.h	5;"	d
+Tank	C++_Assignment/Tank.cpp	/^Tank::Tank()$/;"	f	class:Tank
+Tank	C++_Assignment/Tank.cpp	/^Tank::Tank(int i, float sp, int am)$/;"	f	class:Tank
+Tank	C++_Assignment/Tank.h	/^class Tank$/;"	c
+ammo	C++_Assignment/Tank.h	/^		int ammo;$/;"	m	class:Tank
+decreaseSpeed	C++_Assignment/Tank.cpp	/^float Tank::decreaseSpeed()$/;"	f	class:Tank
+fire	C++_Assignment/Tank.cpp	/^int Tank::fire()$/;"	f	class:Tank
+getAmmo	C++_Assignment/Tank.h	/^		int getAmmo(){return ammo;}$/;"	f	class:Tank
+getID	C++_Assignment/Tank.h	/^		int getID(){return id;}$/;"	f	class:Tank
+getSpeed	C++_Assignment/Tank.h	/^		float getSpeed(){return speed;}$/;"	f	class:Tank
+id	C++_Assignment/Tank.h	/^		int id;$/;"	m	class:Tank
+increaseSpeed	C++_Assignment/Tank.cpp	/^float Tank::increaseSpeed()$/;"	f	class:Tank
+main	C++_Assignment/main.cpp	/^int main()$/;"	f
+milsec	JS_Assignment/main.js	/^    var milsec = 3000;$/;"	v
+outputTankInfo	C++_Assignment/main.cpp	/^void outputTankInfo(Tank t)$/;"	f
+reload	C++_Assignment/Tank.cpp	/^int Tank::reload()$/;"	f	class:Tank
+setAmmo	C++_Assignment/Tank.cpp	/^void Tank::setAmmo(int y)$/;"	f	class:Tank
+setID	C++_Assignment/Tank.cpp	/^void Tank::setID(int y)$/;"	f	class:Tank
+setSpeed	C++_Assignment/Tank.cpp	/^void Tank::setSpeed(float f)$/;"	f	class:Tank
+sleep	C++_Assignment/main.cpp	/^void sleep(clock_t milsec)$/;"	f
+speed	C++_Assignment/Tank.h	/^		float speed;$/;"	m	class:Tank
+window.onload	JS_Assignment/main.js	/^\/\/Once the page has loaded setup event listener for button presses$/;"	f
