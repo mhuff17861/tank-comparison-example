@@ -4,110 +4,86 @@ window.onload = function() {
 }
 
 //The test function which will be run once the user has entered tank information
-test()
-{
+function test() {
+    clearOutput();
 	var id, ammo, count, speed;
-    var milsec = 3000;
+    var milsec = 1500;
 
-	try
-	{
-		cout << "Enter the first tank's' ID (0-50): \n";
-		cin >> id;
-		cout << "Enter the first tank's' speed (0-60): \n";
-		cin >> speed;
-		cout << "Enter the first tank's' ammo (0-40): \n";
-		cin >> ammo;
+	try {
+        count = document.getElementById("fire").value;
+	    one = new Tank();
 
-		Tank one;
-
+        id = document.getElementById("id1").value;
+        speed = document.getElementById("speed1").value;
+        ammo = document.getElementById("ammo1").value;
 		one.setID(id);
-		one.setAmmo(ammo);
 		one.setSpeed(speed);
+		one.setAmmo(ammo);
 
-		cout << "Enter the second tank's' ID (0-50): \n";
-		cin >> id;
-		cout << "Enter the second tank's' speed (0-60): \n";
-		cin >> speed;
-		cout << "Enter the second tank's' ammo (0-40): \n";
-		cin >> ammo;
+        id = document.getElementById("id2").value;
+        speed = document.getElementById("speed2").value;
+        ammo = document.getElementById("ammo2").value;
 
-		Tank two(id, speed, ammo);
+		two = new Tank(id, speed, ammo);
 
 		outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
-		cout << endl;
 
-		cout << "Increasing Speed\n";
+        appendHTML("<p>Increasing Speed</p>");
 		one.increaseSpeed();
 		two.increaseSpeed();
 
 		outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
-		cout << endl;
 
-		cout << "Decreasing Speed\n";
+        appendHTML("<p>Decreasing Speed</p>");
 		one.decreaseSpeed();
 		two.decreaseSpeed();
 
 		outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
-		cout << endl;
 
-		do
-		{
-		    cout << "How many times would you like to fire? (1-25)\n";
-		    cin >> count;
-		} while (count < 1 || count > 25);
-
-		cout << "Firing\n";
-		for (int i=0;i<count;i++)
-		{
+        appendHTML("<p>Firing</p>");
+		for (var i=0;i<count;i++) {
 			one.fire();
 			two.fire();
 	    }
 
 	    outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
-		cout << endl;
 
-		cout << "Reloading\n";
+        appendHTML("<p>Reloading</p>");
 		one.reload();
 		two.reload();
 
 		outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
 
-	} catch (const char* st)
-	{
-		cout << st << endl;
+	} catch (error) {
+        appendHTML("<p>" + error + "</p>");
 	}
 
-	cout << "Press enter to continue...\n";
-	cin.ignore();
-	cin.get();
-
-	return 0;
 }
 
 /***************************function definitions**************************/
 
 
-void outputTankInfo(Tank t)
-{
-	cout << "Tank ID: " << t.getID() << endl;
-	cout << "Tank Speed: " << t.getSpeed() << endl;
-	cout << "Tank Ammo: " << t.getAmmo() << endl;
+function outputTankInfo(t) {
+    var tankInfo = "";
+    tankInfo += "<p>Tank ID: " + t.getID() + "</p>";
+    tankInfo += "<p>Tank Speed: " + t.getSpeed() + "</p>";
+    tankInfo += "<p>Tank Ammo: " + t.getAmmo() + "</p><br><br>";
+
+    appendHTML(tankInfo);
 }
 
-
-void sleep(clock_t milsec)
-{
-	clock_t start = clock();
-	clock_t end = milsec + start;
-	while(clock() != end);
+function appendHTML(out) {
+    var output = document.getElementById("test-output");
+    output.innerHTML += out;
 }
+
+function clearOutput() {
+    var output = document.getElementById("test-output");
+    output.innerHTML = "";
+}
+

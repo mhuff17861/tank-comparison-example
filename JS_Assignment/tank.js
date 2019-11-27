@@ -1,17 +1,17 @@
 class Tank {
 /**************************Constructors*******************/
 
-	constructor() {
-		this.id = 0;
-		this.speed = 0;
-		this.ammo = 0;
-	}
-
 	constructor(i, sp, am) {
-		setID(i);
-		setSpeed(sp);
-		setAmmo(am);
-	}
+        if (!arguments.length) {
+            this.id = 0;
+	    	this.speed = 0;
+	    	this.ammo = 0;
+        } else {
+		    this.id = i;
+	    	this.speed = sp;
+	    	this.ammo = am;
+        }
+    }
 
 /*************************Accessors*************************/
 
@@ -52,7 +52,7 @@ class Tank {
     }
 
     increaseSpeed() {
-    	var test = this.speed + 5;
+    	var test = parseInt(this.speed) + 5;
 
     	if (test <= 60)
     	this.speed = test;
