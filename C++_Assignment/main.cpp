@@ -2,14 +2,12 @@
 
 #include "Tank.h"
 #include <iostream>
-#include <ctime>
 using namespace std;
 
 /****************************Prototypes***********************/
 
 
 void outputTankInfo(Tank t);
-void sleep(clock_t milsec);
 
 /**************************Main*******************************/
 
@@ -17,7 +15,6 @@ int main()
 {
 	int id, ammo, count;
 	float speed;
-	clock_t milsec = 3000;
 
 	try
 	{
@@ -45,7 +42,6 @@ int main()
 
 		outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
 		cout << endl;
 
 		cout << "Increasing Speed\n";
@@ -54,7 +50,6 @@ int main()
 
 		outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
 		cout << endl;
 
 		cout << "Decreasing Speed\n";
@@ -63,7 +58,6 @@ int main()
 
 		outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
 		cout << endl;
 
 		do
@@ -81,7 +75,6 @@ int main()
 
 	    outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
 		cout << endl;
 
 		cout << "Reloading\n";
@@ -90,7 +83,6 @@ int main()
 
 		outputTankInfo(one);
 		outputTankInfo(two);
-		sleep(milsec);
 
 	} catch (const char* st)
 	{
@@ -113,17 +105,4 @@ void outputTankInfo(Tank t)
 	cout << "Tank Speed: " << t.getSpeed() << endl;
 	cout << "Tank Ammo: " << t.getAmmo() << endl;
 }
-
-
-void sleep(clock_t milsec)
-{
-	clock_t start = clock();
-	clock_t end = milsec + start;
-	while(clock() != end);
-}
-
-
-
-
-
 
