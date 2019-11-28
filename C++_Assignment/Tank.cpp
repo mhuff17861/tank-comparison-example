@@ -1,6 +1,3 @@
-//Micah Huff
-//Programming Project 6
-
 #include "Tank.h"
 
 /**************************Constructors*******************/

@@ -1,9 +1,3 @@
-/*
-Micah Huff
-Programming Project 6
-*/
-
-
 /**************************PreProcessor*********************/
 
 #include "Tank.h"
