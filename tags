@@ -4,7 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-TANK_H	C++_Assignment/Tank.h	5;"	d
+TANK_H	C++_Assignment/Tank.h	3;"	d
 Tank	C++_Assignment/Tank.cpp	/^Tank::Tank()$/;"	f	class:Tank
 Tank	C++_Assignment/Tank.cpp	/^Tank::Tank(int i, float sp, int am)$/;"	f	class:Tank
 Tank	C++_Assignment/Tank.h	/^class Tank$/;"	c
